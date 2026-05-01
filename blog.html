@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Blog — HKOTC | Hong Kong Crypto &amp; USDT/HKD OTC News</title>
+  <meta name="description" content="Stay up to date with Hong Kong crypto news, USDT/HKD market insights, OTC trading tips, and regulatory updates from HKOTC — Hong Kong's trusted crypto OTC desk.">
+  <meta name="keywords" content="Hong Kong crypto news, USDT HKD news, crypto OTC Hong Kong blog, Bitcoin Hong Kong, Ethereum HKD, HKMA crypto, 香港加密貨幣新聞">
+  <meta name="author" content="HKOTC">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <link rel="canonical" href="https://hkotc.io/blog.html">
+  <link rel="alternate" hreflang="en-HK" href="https://hkotc.io/blog.html">
+  <link rel="alternate" hreflang="x-default" href="https://hkotc.io/blog.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hkotc.io/blog.html">
+  <meta property="og:site_name" content="HKOTC">
+  <meta property="og:title" content="Blog — HKOTC | Hong Kong Crypto &amp; OTC News">
+  <meta property="og:description" content="Hong Kong crypto news, USDT/HKD market insights, OTC trading tips, and regulatory updates.">
+  <meta property="og:image" content="https://hkotc.io/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blog — HKOTC | Hong Kong Crypto &amp; OTC News">
+  <meta name="twitter:image" content="https://hkotc.io/og-image.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"HKOTC Blog","url":"https://hkotc.io/blog.html","publisher":{"@type":"Organization","name":"HKOTC","url":"https://hkotc.io"}}</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #07090f; --bg2: #0d1120; --surface: #131829;
+      --border: rgba(255,255,255,0.08); --text: #f0f2ff; --muted: #8892a8;
+      --gold: #f5a623; --gold2: #ffcc66; --green: #22c55e;
+      --radius: 16px; --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,14,26,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border); padding: 0 24px; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-brand { font-size: 20px; font-weight: 900; letter-spacing: -0.5px; background: linear-gradient(135deg,var(--gold),var(--gold2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
+    .nav-links a { padding: 8px 14px; border-radius: 8px; font-size: 14px; font-weight: 500; color: var(--muted); transition: all 0.2s; }
+    .nav-links a:hover { color: var(--text); background: var(--surface); }
+    .nav-links a.active { color: var(--gold); background: var(--surface); }
+    .nav-cta { padding: 9px 18px; border-radius: 10px; font-size: 14px; font-weight: 700; background: linear-gradient(135deg,var(--gold),var(--gold2)); color: #07090f; transition: all 0.2s; }
+    .nav-cta:hover { opacity: 0.9; transform: translateY(-1px); }
+    .nav-right-group { display: flex; align-items: center; gap: 10px; }
+    .lang-btn { display:inline-flex; align-items:center; gap:5px; padding: 6px 14px; border-radius: 8px; font-size: 13px; font-weight: 700; background: rgba(245,166,35,0.1); border: 1px solid rgba(245,166,35,0.25); color: var(--gold); cursor: pointer; transition: all 0.2s; }
+    .lang-btn:hover { background: rgba(245,166,35,0.18); }
+    .lang-dropdown { position:relative; display:inline-flex; }
+    .lang-menu { display:none; position:absolute; top:calc(100% + 6px); right:0; background:var(--bg2,#0d1120); border:1px solid rgba(245,166,35,0.2); border-radius:10px; padding:5px; min-width:130px; z-index:300; box-shadow:0 8px 28px rgba(0,0,0,0.35); }
+    .lang-menu.open { display:flex; flex-direction:column; gap:2px; }
+    .lang-option { display:flex; align-items:center; gap:8px; width:100%; padding:8px 10px; border-radius:7px; border:none; background:transparent; color:var(--text,#e8eaf6); cursor:pointer; font-size:13px; font-weight:600; font-family:inherit; transition:background 0.15s; text-align:left; }
+    .lang-option:hover { background:rgba(255,255,255,0.06); }
+    .lang-option.active { background:rgba(245,166,35,0.15); color:#f5a623; }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+
+    /* ── HERO ── */
+    .blog-hero { padding: 64px 24px 48px; text-align: center; background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(245,166,35,0.08) 0%, transparent 70%); }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(245,166,35,0.1); border: 1px solid rgba(245,166,35,0.2); color: var(--gold); font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 100px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.8px; }
+    .blog-hero h1 { font-size: clamp(28px, 5vw, 52px); font-weight: 900; letter-spacing: -1.5px; margin-bottom: 14px; line-height: 1.1; }
+    .blog-hero h1 span { background: linear-gradient(135deg,var(--gold),var(--gold2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .blog-hero p { font-size: 16px; color: var(--muted); max-width: 520px; margin: 0 auto 28px; }
+
+    /* ── FILTERS ── */
+    .blog-filters { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; padding: 0 24px 40px; }
+    .filter-btn { padding: 7px 18px; border-radius: 100px; font-size: 13px; font-weight: 600; background: var(--surface); border: 1px solid var(--border); color: var(--muted); cursor: pointer; transition: all 0.2s; }
+    .filter-btn:hover, .filter-btn.active { background: rgba(245,166,35,0.12); border-color: rgba(245,166,35,0.3); color: var(--gold); }
+
+    /* ── BENTO CONTAINER ── */
+    .bento-wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px 80px; }
+
+    /* ── BENTO GRID ── */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: 60px;
+      gap: 14px;
+    }
+
+    /* Tile base */
+    .b-tile {
+      border-radius: var(--radius);
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .b-tile:hover { transform: translateY(-4px) scale(1.01); box-shadow: 0 24px 60px rgba(0,0,0,0.5); }
+    .b-tile a.tile-link { position: absolute; inset: 0; z-index: 4; }
+
+    /* Grid positions */
+    .b-tile-1 { grid-column: 1 / 8;  grid-row: 1 / 7;  } /* large hero — left */
+    .b-tile-2 { grid-column: 8 / 13; grid-row: 1 / 4;  } /* medium — top right */
+    .b-tile-3 { grid-column: 8 / 13; grid-row: 4 / 7;  } /* medium — bottom right */
+    .b-tile-4 { grid-column: 1 / 5;  grid-row: 7 / 11; } /* small — bottom left */
+    .b-tile-5 { grid-column: 5 / 9;  grid-row: 7 / 11; } /* small — bottom center */
+    .b-tile-6 { grid-column: 9 / 13; grid-row: 7 / 11; } /* small — bottom right */
+
+    /* Backgrounds */
+    .bg-gold   { background: linear-gradient(145deg, #2a1800 0%, #1a0f00 40%, #0a0500 100%); }
+    .bg-blue   { background: linear-gradient(145deg, #0d1f3d 0%, #071228 100%); }
+    .bg-green  { background: linear-gradient(145deg, #0a2318 0%, #051210 100%); }
+    .bg-purple { background: linear-gradient(145deg, #1a0d35 0%, #0e0820 100%); }
+    .bg-red    { background: linear-gradient(145deg, #2a0808 0%, #150404 100%); }
+    .bg-teal   { background: linear-gradient(145deg, #052828 0%, #031515 100%); }
+
+    /* Decorative glow blobs */
+    .b-tile::before {
+      content: ''; position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.35; z-index: 0;
+      transition: opacity 0.3s;
+    }
+    .b-tile:hover::before { opacity: 0.55; }
+    .bg-gold::before   { background: #f5a623; width: 200px; height: 200px; top: -40px; left: -40px; }
+    .bg-blue::before   { background: #3b82f6; width: 160px; height: 160px; top: -30px; right: -30px; }
+    .bg-green::before  { background: #22c55e; width: 160px; height: 160px; bottom: -30px; left: -20px; }
+    .bg-purple::before { background: #a855f7; width: 160px; height: 160px; top: -20px; right: -20px; }
+    .bg-red::before    { background: #ef4444; width: 140px; height: 140px; top: -20px; left: -20px; }
+    .bg-teal::before   { background: #14b8a6; width: 140px; height: 140px; bottom: -20px; right: -20px; }
+
+    /* SVG illustration */
+    .tile-art {
+      position: absolute; z-index: 1;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .b-tile-1 .tile-art { inset: 0; opacity: 0.12; }
+    .b-tile-1 .tile-art svg { width: 70%; height: 70%; }
+    .b-tile-2 .tile-art, .b-tile-3 .tile-art { top: 12px; right: 16px; opacity: 0.18; }
+    .b-tile-2 .tile-art svg, .b-tile-3 .tile-art svg { width: 80px; height: 80px; }
+    .b-tile-4 .tile-art, .b-tile-5 .tile-art, .b-tile-6 .tile-art { top: 14px; right: 14px; opacity: 0.15; }
+    .b-tile-4 .tile-art svg, .b-tile-5 .tile-art svg, .b-tile-6 .tile-art svg { width: 52px; height: 52px; }
+
+    /* Bottom overlay — text lives here */
+    .tile-overlay {
+      position: absolute; bottom: 0; left: 0; right: 0; z-index: 2;
+      padding: 28px 26px 26px;
+      background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.6) 60%, transparent 100%);
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .b-tile-2 .tile-overlay, .b-tile-3 .tile-overlay { padding: 20px; gap: 8px; background: linear-gradient(to top, rgba(0,0,0,0.94) 0%, rgba(0,0,0,0.5) 70%, transparent 100%); }
+    .b-tile-4 .tile-overlay, .b-tile-5 .tile-overlay, .b-tile-6 .tile-overlay { padding: 18px; gap: 7px; background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 80%, transparent 100%); }
+
+    /* Tag */
+    .tile-tag {
+      display: inline-flex; align-items: center; width: fit-content;
+      font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px;
+      padding: 3px 10px; border-radius: 100px;
+    }
+    .tag-regulation { background: rgba(245,166,35,0.2); color: var(--gold); border: 1px solid rgba(245,166,35,0.3); }
+    .tag-market     { background: rgba(59,130,246,0.2);  color: #60a5fa;    border: 1px solid rgba(59,130,246,0.3); }
+    .tag-guide      { background: rgba(34,197,94,0.2);   color: #4ade80;    border: 1px solid rgba(34,197,94,0.3); }
+    .tag-defi       { background: rgba(168,85,247,0.2);  color: #c084fc;    border: 1px solid rgba(168,85,247,0.3); }
+    .tag-news       { background: rgba(239,68,68,0.2);   color: #f87171;    border: 1px solid rgba(239,68,68,0.3); }
+
+    /* Title */
+    .tile-title { font-weight: 800; line-height: 1.25; letter-spacing: -0.4px; color: #fff; }
+    .b-tile-1 .tile-title { font-size: clamp(18px, 2.2vw, 26px); }
+    .b-tile-2 .tile-title, .b-tile-3 .tile-title { font-size: 15px; }
+    .b-tile-4 .tile-title, .b-tile-5 .tile-title, .b-tile-6 .tile-title { font-size: 13px; }
+
+    /* Excerpt — only on hero tile */
+    .tile-excerpt { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.65; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+    /* Meta row */
+    .tile-meta { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .tile-date { font-size: 11px; color: rgba(255,255,255,0.4); font-weight: 500; }
+    .tile-read { font-size: 12px; font-weight: 700; color: var(--gold); display: inline-flex; align-items: center; gap: 4px; transition: gap 0.2s; }
+    .b-tile:hover .tile-read { gap: 8px; }
+
+    /* ── BOTTOM ROW: rate ticker + newsletter + trending ── */
+    .bento-extras {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    .extra-tile {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 24px; transition: border-color 0.2s;
+    }
+    .extra-tile:hover { border-color: rgba(245,166,35,0.2); }
+    .extra-title { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); margin-bottom: 16px; }
+
+    /* Rate tile */
+    .rate-ticker { display: flex; align-items: center; gap: 10px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; font-size: 15px; font-weight: 700; margin-bottom: 12px; }
+    .rate-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); flex-shrink: 0; animation: blink 2s infinite; }
+    @keyframes blink { 0%,100%{opacity:1}50%{opacity:0.3} }
+    .rate-cta { display: block; text-align: center; padding: 11px; border-radius: 12px; background: linear-gradient(135deg,var(--gold),var(--gold2)); color: #0a0e1a; font-size: 13px; font-weight: 800; transition: opacity 0.2s; }
+    .rate-cta:hover { opacity: 0.9; }
+
+    /* Newsletter */
+    .nl-input { width: 100%; padding: 11px 14px; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font-size: 14px; font-family: inherit; outline: none; margin-bottom: 8px; transition: border-color 0.2s; }
+    .nl-input:focus { border-color: rgba(245,166,35,0.4); }
+    .nl-input::placeholder { color: var(--muted); }
+    .nl-btn { width: 100%; padding: 11px; border-radius: 10px; font-size: 14px; font-weight: 700; background: linear-gradient(135deg,var(--gold),var(--gold2)); color: #0a0e1a; border: none; cursor: pointer; }
+    .nl-btn:hover { opacity: 0.9; }
+
+    /* Trending */
+    .trend-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .trend-item { display: flex; gap: 12px; align-items: flex-start; }
+    .trend-num { font-size: 18px; font-weight: 900; color: var(--surface); min-width: 26px; line-height: 1.2; }
+    .trend-info { flex: 1; }
+    .trend-t { font-size: 13px; font-weight: 600; line-height: 1.4; color: var(--text); transition: color 0.2s; }
+    .trend-item:hover .trend-t { color: var(--gold); }
+    .trend-m { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+    /* ── CHANNEL POSTS SECTION ── */
+    .channel-section { max-width: 1200px; margin: 0 auto; padding: 0 24px 28px; }
+    .ch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .ch-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; transition: all 0.22s; }
+    .ch-card:hover { border-color: rgba(245,166,35,0.3); transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.4); }
+    .ch-media { width: 100%; aspect-ratio: 16/9; overflow: hidden; background: var(--surface); position: relative; flex-shrink: 0; }
+    .ch-media img, .ch-media video { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.35s; }
+    .ch-card:hover .ch-media img { transform: scale(1.04); }
+    .ch-media-placeholder { width: 100%; height: 100%; background: linear-gradient(135deg,#0d1829 0%,#1a0f2e 100%); display: flex; align-items: center; justify-content: center; opacity: 0.6; }
+    .ch-body { padding: 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+    .ch-channel { display: flex; align-items: center; gap: 7px; font-size: 11px; font-weight: 800; color: var(--gold); }
+    .ch-channel-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: blink 2s infinite; flex-shrink: 0; }
+    .ch-text { font-size: 13.5px; line-height: 1.65; color: var(--text); display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; white-space: pre-line; flex: 1; }
+    .ch-hashtags { font-size: 12px; color: #4a9eff; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .ch-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; }
+    .ch-date { font-size: 11px; color: var(--muted); }
+    .ch-tg-btn { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 700; color: #2AABEE; text-decoration: none; transition: opacity 0.2s; }
+    .ch-tg-btn:hover { opacity: 0.8; }
+    .ch-tg-btn svg { flex-shrink: 0; }
+    @media (max-width: 900px) { .ch-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 580px) { .ch-grid { grid-template-columns: 1fr; } }
+
+    /* ── LIVE NEWS SECTION ── */
+    .live-news { max-width: 1200px; margin: 0 auto; padding: 0 24px 20px; }
+    .section-head { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+    .section-head-title { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: var(--gold); white-space: nowrap; }
+    .section-head::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 20px; }
+    .news-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; transition: all 0.2s; text-decoration: none; color: inherit; }
+    .news-card:hover { border-color: rgba(245,166,35,0.28); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.35); }
+    .news-img-wrap { width: 100%; aspect-ratio: 16/9; overflow: hidden; background: var(--surface); flex-shrink: 0; }
+    .news-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.35s ease; }
+    .news-card:hover .news-img-wrap img { transform: scale(1.04); }
+    .news-img-placeholder { width: 100%; height: 100%; background: linear-gradient(135deg, var(--surface) 0%, #1a2040 100%); display: flex; align-items: center; justify-content: center; }
+    .news-img-placeholder svg { opacity: 0.18; }
+    .news-body { padding: 16px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+    .news-source { display: inline-flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; padding: 3px 9px; border-radius: 100px; border: 1px solid rgba(245,166,35,0.25); background: rgba(245,166,35,0.1); color: var(--gold); width: fit-content; }
+    .news-title { font-size: 14px; font-weight: 700; line-height: 1.45; color: var(--text); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; flex: 1; }
+    .news-meta { display: flex; justify-content: space-between; align-items: center; }
+    .news-date { font-size: 11px; color: var(--muted); }
+    .news-arrow { font-size: 12px; font-weight: 700; color: var(--gold); transition: transform 0.2s; }
+    .news-card:hover .news-arrow { transform: translateX(3px); }
+    /* Skeleton loader */
+    @keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+    .skel { background: linear-gradient(90deg,var(--surface) 25%,rgba(255,255,255,0.05) 50%,var(--surface) 75%); background-size: 200% 100%; animation: shimmer 1.4s infinite; border-radius: 6px; }
+    /* Load more */
+    .load-more-wrap { text-align: center; padding-bottom: 12px; }
+    .load-more-btn { padding: 11px 32px; border-radius: 100px; font-size: 13px; font-weight: 700; background: var(--surface); border: 1px solid var(--border); color: var(--muted); cursor: pointer; transition: all 0.2s; font-family: inherit; }
+    .load-more-btn:hover { border-color: rgba(245,166,35,0.3); color: var(--gold); }
+    @media (max-width: 900px) { .news-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 580px) { .news-grid { grid-template-columns: 1fr; } }
+
+    /* ── FOOTER ── */
+    footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 32px 24px; margin-top: 16px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-brand { font-size: 18px; font-weight: 900; background: linear-gradient(135deg,var(--gold),var(--gold2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .footer-links a { font-size: 13px; color: var(--muted); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy { font-size: 12px; color: var(--muted); width: 100%; text-align: center; padding-top: 16px; border-top: 1px solid var(--border); margin-top: 8px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .bento-grid {
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: 56px;
+      }
+      .b-tile-1 { grid-column: 1 / 7; grid-row: 1 / 6; }
+      .b-tile-2 { grid-column: 1 / 4; grid-row: 6 / 10; }
+      .b-tile-3 { grid-column: 4 / 7; grid-row: 6 / 10; }
+      .b-tile-4 { grid-column: 1 / 3; grid-row: 10 / 14; }
+      .b-tile-5 { grid-column: 3 / 5; grid-row: 10 / 14; }
+      .b-tile-6 { grid-column: 5 / 7; grid-row: 10 / 14; }
+      .bento-extras { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .bento-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 52px;
+      }
+      .b-tile-1 { grid-column: 1 / 3; grid-row: 1 / 7; }
+      .b-tile-2 { grid-column: 1 / 2; grid-row: 7 / 11; }
+      .b-tile-3 { grid-column: 2 / 3; grid-row: 7 / 11; }
+      .b-tile-4 { grid-column: 1 / 2; grid-row: 11 / 15; }
+      .b-tile-5 { grid-column: 2 / 3; grid-row: 11 / 15; }
+      .b-tile-6 { grid-column: 1 / 3; grid-row: 15 / 18; }
+      .b-tile-6 { grid-column: 1 / 3; }
+      .b-tile-1 .tile-excerpt { -webkit-line-clamp: 2; }
+      .bento-wrap { padding: 0 16px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-brand">HKOTC</a>
+  <ul class="nav-links">
+    <li><a href="index.html#calculator" data-i18n="nav-exchange">Exchange</a></li>
+    <li><a href="index.html#features" data-i18n="nav-features">Features</a></li>
+    <li><a href="index.html#how" data-i18n="nav-how">How It Works</a></li>
+    <li><a href="index.html#contact" data-i18n="nav-contact">Contact</a></li>
+    <li><a href="blog.html" class="active" data-i18n="nav-blog">Blog</a></li>
+  </ul>
+  <div class="nav-right-group">
+    <div class="lang-dropdown" id="lang-dropdown">
+      <button class="lang-btn" id="lang-btn" onclick="toggleLangMenu()">
+        <span id="lang-current">EN</span>
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" style="flex-shrink:0"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="lang-menu" id="lang-menu">
+        <button class="lang-option" data-lang="en" onclick="setLang('en')">
+          <img src="https://flagcdn.com/w20/gb.png" width="16" height="12" alt="" style="border-radius:2px;object-fit:cover;flex-shrink:0"> English
+        </button>
+        <button class="lang-option" data-lang="zh" onclick="setLang('zh')">
+          <img src="https://flagcdn.com/w20/hk.png" width="16" height="12" alt="" style="border-radius:2px;object-fit:cover;flex-shrink:0"> 中文
+        </button>
+      </div>
+    </div>
+    <a href="index.html#calculator" class="nav-cta" data-i18n="nav-cta">Trade Now →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="blog-hero">
+  <div class="hero-badge">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+    <span data-i18n="hero-badge">HKOTC Blog</span>
+  </div>
+  <h1 data-i18n="hero-title">Hong Kong <span>Crypto News</span><br>&amp; Insights</h1>
+  <p data-i18n="hero-sub">Market updates, OTC guides, regulatory news, and expert analysis from HK's crypto OTC desk.</p>
+</section>
+
+<!-- FILTERS -->
+<div class="blog-filters">
+  <button class="filter-btn active" data-i18n="f-all">All</button>
+  <button class="filter-btn" data-i18n="f-market">Market</button>
+  <button class="filter-btn" data-i18n="f-reg">Regulation</button>
+  <button class="filter-btn" data-i18n="f-guide">OTC Guide</button>
+  <button class="filter-btn" data-i18n="f-defi">DeFi</button>
+  <button class="filter-btn" data-i18n="f-news">News</button>
+</div>
+
+<!-- BENTO GRID -->
+<div class="bento-wrap">
+  <div class="bento-grid">
+
+    <!-- TILE 1 — Hero (large left) -->
+    <article class="b-tile b-tile-1 bg-gold">
+      <a href="#" class="tile-link" aria-label="Read article"></a>
+      <div class="tile-art">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="4"/></svg>
+      </div>
+      <div class="tile-overlay">
+        <span class="tile-tag tag-regulation">Regulation</span>
+        <h2 class="tile-title">Hong Kong Approves New Virtual Asset OTC Framework — What It Means for USDT Traders</h2>
+        <p class="tile-excerpt">The Hong Kong Monetary Authority (HKMA) has published updated guidelines covering peer-to-peer and over-the-counter virtual asset transactions. The framework introduces clearer KYC tiers, expanded payment rails including FPS and faster bank transfers, and a streamlined licensing pathway for compliant OTC desks.</p>
+        <div class="tile-meta">
+          <span class="tile-date">April 28, 2026 · HKOTC Research</span>
+          <span class="tile-read">Read more →</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- TILE 2 — Medium top right -->
+    <article class="b-tile b-tile-2 bg-blue">
+      <a href="#" class="tile-link" aria-label="Read article"></a>
+      <div class="tile-art">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+      </div>
+      <div class="tile-overlay">
+        <span class="tile-tag tag-market">Market</span>
+        <h2 class="tile-title">USDT/HKD Rate Hits 7.83 — Why the Peg Premium Is Widening in 2026</h2>
+        <div class="tile-meta">
+          <span class="tile-date">April 25, 2026</span>
+          <span class="tile-read">Read →</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- TILE 3 — Medium bottom right -->
+    <article class="b-tile b-tile-3 bg-green">
+      <a href="#" class="tile-link" aria-label="Read article"></a>
+      <div class="tile-art">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+      </div>
+      <div class="tile-overlay">
+        <span class="tile-tag tag-guide">OTC Guide</span>
+        <h2 class="tile-title">How to Buy USDT with HKD in Hong Kong: Step-by-Step Guide (2026)</h2>
+        <div class="tile-meta">
+          <span class="tile-date">April 22, 2026</span>
+          <span class="tile-read">Read →</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- TILE 4 — Small bottom left -->
+    <article class="b-tile b-tile-4 bg-purple">
+      <a href="#" class="tile-link" aria-label="Read article"></a>
+      <div class="tile-art">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+      </div>
+      <div class="tile-overlay">
+        <span class="tile-tag tag-defi">DeFi</span>
+        <h2 class="tile-title">Tether Launches USDT on New Layer-2 — Impact on HK OTC Liquidity</h2>
+        <div class="tile-meta">
+          <span class="tile-date">Apr 19, 2026</span>
+          <span class="tile-read">Read →</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- TILE 5 — Small bottom center -->
+    <article class="b-tile b-tile-5 bg-red">
+      <a href="#" class="tile-link" aria-label="Read article"></a>
+      <div class="tile-art">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      </div>
+      <div class="tile-overlay">
+        <span class="tile-tag tag-news">News</span>
+        <h2 class="tile-title">SFC Warns Against Unlicensed Crypto P2P Platforms in HK</h2>
+        <div class="tile-meta">
+          <span class="tile-date">Apr 15, 2026</span>
+          <span class="tile-read">Read →</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- TILE 6 — Small bottom right -->
+    <article class="b-tile b-tile-6 bg-teal">
+      <a href="#" class="tile-link" aria-label="Read article"></a>
+      <div class="tile-art">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#14b8a6" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+      </div>
+      <div class="tile-overlay">
+        <span class="tile-tag tag-guide">OTC Guide</span>
+        <h2 class="tile-title">FPS vs Bank Transfer vs Cash: Best Ways to Pay for USDT</h2>
+        <div class="tile-meta">
+          <span class="tile-date">Apr 10, 2026</span>
+          <span class="tile-read">Read →</span>
+        </div>
+      </div>
+    </article>
+
+  </div><!-- /bento-grid -->
+
+  <!-- EXTRAS ROW: Live Rate · Newsletter · Trending -->
+  <div class="bento-extras">
+
+    <!-- Live Rate -->
+    <div class="extra-tile">
+      <div class="extra-title" data-i18n="w-rate">Live Rate</div>
+      <div class="rate-ticker">
+        <div class="rate-dot"></div>
+        <span>1 USDT ≈ <strong id="side-rate" style="color:var(--gold)">7.82 HKD</strong></span>
+      </div>
+      <a href="index.html#calculator" class="rate-cta" data-i18n="w-rate-cta">Get Live Quote →</a>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="extra-tile">
+      <div class="extra-title" data-i18n="w-nl-title">Weekly Digest</div>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:14px" data-i18n="w-nl-sub">Top Hong Kong crypto stories every Monday morning.</p>
+      <input type="email" class="nl-input" placeholder="your@email.com">
+      <button class="nl-btn" data-i18n="w-nl-btn" onclick="this.textContent=currentLang==='zh'?'已訂閱 ✓':'Subscribed ✓';this.style.opacity='0.6'">Subscribe Free</button>
+    </div>
+
+    <!-- Trending -->
+    <div class="extra-tile">
+      <div class="extra-title" data-i18n="w-trending">Trending</div>
+      <ul class="trend-list">
+        <li class="trend-item">
+          <span class="trend-num">01</span>
+          <div class="trend-info"><div class="trend-t" data-i18n="tr-1">New HKMA OTC Framework 2026</div><div class="trend-m" data-i18n="tr-1m">2.4k reads · Regulation</div></div>
+        </li>
+        <li class="trend-item">
+          <span class="trend-num">02</span>
+          <div class="trend-info"><div class="trend-t" data-i18n="tr-2">How to Buy USDT with HKD</div><div class="trend-m" data-i18n="tr-2m">1.8k reads · Guide</div></div>
+        </li>
+        <li class="trend-item">
+          <span class="trend-num">03</span>
+          <div class="trend-info"><div class="trend-t" data-i18n="tr-3">USDT/HKD Rate Analysis</div><div class="trend-m" data-i18n="tr-3m">1.2k reads · Market</div></div>
+        </li>
+        <li class="trend-item">
+          <span class="trend-num">04</span>
+          <div class="trend-info"><div class="trend-t" data-i18n="tr-4">FPS vs Bank Transfer Guide</div><div class="trend-m" data-i18n="tr-4m">980 reads · Guide</div></div>
+        </li>
+      </ul>
+    </div>
+
+  </div><!-- /bento-extras -->
+
+</div><!-- /bento-wrap -->
+
+<!-- CHANNEL POSTS SECTION -->
+<div class="channel-section">
+  <div class="section-head">
+    <span class="section-head-title" data-i18n="ch-section-title">📢 From Our Channel</span>
+  </div>
+  <div class="ch-grid" id="ch-grid">
+    <!-- populated by JS -->
+  </div>
+  <div class="load-more-wrap" id="ch-load-more-wrap" style="display:none">
+    <button class="load-more-btn" id="ch-load-more-btn" onclick="loadMoreChannel()" data-i18n="ch-load-more">Load More</button>
+  </div>
+</div>
+
+<!-- LIVE NEWS SECTION -->
+<div class="live-news">
+  <div class="section-head">
+    <span class="section-head-title" data-i18n="news-section-title">Latest from the Web</span>
+  </div>
+  <div class="news-grid" id="news-grid">
+    <!-- skeleton placeholders filled by JS -->
+  </div>
+  <div class="load-more-wrap" id="load-more-wrap" style="display:none">
+    <button class="load-more-btn" id="load-more-btn" onclick="loadMoreNews()" data-i18n="news-load-more">Load More</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-brand">HKOTC</a>
+    <div class="footer-links">
+      <a href="index.html" data-i18n="ft-home">Home</a>
+      <a href="index.html#calculator" data-i18n="nav-exchange">Exchange</a>
+      <a href="index.html#contact" data-i18n="nav-contact">Contact</a>
+      <a href="privacy.html" data-i18n="ft-privacy">Privacy</a>
+      <a href="terms.html" data-i18n="ft-terms">Terms</a>
+      <a href="blog.html" data-i18n="nav-blog">Blog</a>
+    </div>
+    <p class="footer-copy" data-i18n="ft-copy">© 2025 HKOTC.io. All rights reserved. Not financial advice.</p>
+  </div>
+</footer>
+
+<script>
+  const LANG = {
+    en: {
+      'nav-exchange':'Exchange','nav-features':'Features','nav-how':'How It Works','nav-contact':'Contact','nav-blog':'Blog',
+      'nav-cta': 'Trade Now →',
+      'hero-badge': 'HKOTC Blog',
+      'hero-title': 'Hong Kong <span>Crypto News</span><br>&amp; Insights',
+      'hero-sub': "Market updates, OTC guides, regulatory news, and expert analysis from HK's crypto OTC desk.",
+      'f-all':'All','f-market':'Market','f-reg':'Regulation','f-guide':'OTC Guide','f-defi':'DeFi','f-news':'News',
+      'w-rate':'Live Rate','w-rate-cta':'Get Live Quote →',
+      'w-nl-title':'Weekly Digest','w-nl-sub':'Top Hong Kong crypto stories every Monday morning.','w-nl-btn':'Subscribe Free',
+      'w-trending':'Trending',
+      'tr-1':'New HKMA OTC Framework 2026','tr-1m':'2.4k reads · Regulation',
+      'tr-2':'How to Buy USDT with HKD','tr-2m':'1.8k reads · Guide',
+      'tr-3':'USDT/HKD Rate Analysis','tr-3m':'1.2k reads · Market',
+      'tr-4':'FPS vs Bank Transfer Guide','tr-4m':'980 reads · Guide',
+      'ch-section-title':'📢 From Our Channel',
+      'ch-load-more':'Load More',
+      'news-section-title':'Latest from the Web',
+      'news-load-more':'Load More',
+      'ft-home':'Home','ft-privacy':'Privacy','ft-terms':'Terms',
+      'ft-copy':'© 2025 HKOTC.io. All rights reserved. Not financial advice.',
+    },
+    zh: {
+      'nav-exchange':'兌換','nav-features':'特色','nav-how':'如何運作','nav-contact':'聯絡我們','nav-blog':'博客',
+      'nav-cta': '立即交易 →',
+      'hero-badge': 'HKOTC 博客',
+      'hero-title': '香港<span>加密貨幣資訊</span><br>與市場分析',
+      'hero-sub': '市場動態、OTC交易指南、監管新聞及香港加密貨幣場外交易台的專業分析。',
+      'f-all':'全部','f-market':'市場','f-reg':'監管','f-guide':'OTC指南','f-defi':'DeFi','f-news':'新聞',
+      'w-rate':'即時匯率','w-rate-cta':'獲取即時報價 →',
+      'w-nl-title':'每週精選','w-nl-sub':'每週一早上獲取香港加密貨幣頭條新聞。','w-nl-btn':'免費訂閱',
+      'w-trending':'熱門文章',
+      'tr-1':'新HKMA OTC監管框架2026','tr-1m':'2.4k閱讀 · 監管',
+      'tr-2':'如何用港幣購買USDT','tr-2m':'1.8k閱讀 · 指南',
+      'tr-3':'USDT/港幣匯率分析','tr-3m':'1.2k閱讀 · 市場',
+      'tr-4':'FPS vs 銀行轉帳指南','tr-4m':'980閱讀 · 指南',
+      'ch-section-title':'📢 頻道最新貼文',
+      'ch-load-more':'載入更多',
+      'news-section-title':'網絡最新資訊',
+      'news-load-more':'載入更多',
+      'ft-home':'主頁','ft-privacy':'私隱','ft-terms':'條款',
+      'ft-copy':'© 2025 HKOTC.io. 版權所有。內容不構成財務建議。',
+    }
+  };
+
+  let currentLang = localStorage.getItem('lang') || 'en';
+
+  function applyLang(lang) {
+    document.documentElement.lang = lang === 'zh' ? 'zh-HK' : 'en-HK';
+    const t = LANG[lang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      if (t[key] !== undefined) el.innerHTML = t[key];
+    });
+    const lc = document.getElementById('lang-current');
+    if (lc) lc.textContent = lang === 'en' ? 'EN' : '中文';
+    document.querySelectorAll('.lang-option[data-lang]').forEach(opt => {
+      opt.classList.toggle('active', opt.dataset.lang === lang);
+    });
+  }
+
+  function toggleLangMenu() {
+    document.getElementById('lang-menu').classList.toggle('open');
+  }
+
+  function setLang(lang) {
+    currentLang = lang;
+    localStorage.setItem('lang', lang);
+    applyLang(lang);
+    const m = document.getElementById('lang-menu');
+    if (m) m.classList.remove('open');
+  }
+
+  document.addEventListener('click', function(e) {
+    const dd = document.getElementById('lang-dropdown');
+    if (dd && !dd.contains(e.target)) {
+      const m = document.getElementById('lang-menu');
+      if (m) m.classList.remove('open');
+    }
+  });
+
+  applyLang(currentLang);
+
+  // Filter buttons
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  // Live rate
+  async function fetchSideRate() {
+    try {
+      const r = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=tether&vs_currencies=hkd', { cache: 'no-cache' });
+      const d = await r.json();
+      if (d.tether?.hkd) document.getElementById('side-rate').textContent = d.tether.hkd.toFixed(4) + ' HKD';
+    } catch {}
+  }
+  fetchSideRate();
+
+  // ── LIVE NEWS ──────────────────────────────────────────────────
+  const NEWS_FEEDS = [
+    { url: 'https://www.coindesk.com/arc/outboundfeeds/rss/', name: 'CoinDesk' },
+    { url: 'https://cointelegraph.com/rss',                   name: 'CoinTelegraph' },
+    { url: 'https://decrypt.co/feed',                         name: 'Decrypt' },
+    { url: 'https://bitcoinmagazine.com/.rss/full/',           name: 'Bitcoin Magazine' },
+  ];
+  const RSS_API = 'https://api.rss2json.com/v1/api.json?count=10&rss_url=';
+  const NEWS_PER_PAGE = 9;
+  let allNewsItems = [];
+  let newsPage = 0;
+
+  function fmtDate(str) {
+    try {
+      return new Date(str).toLocaleDateString('en-HK', { day:'numeric', month:'short', year:'numeric' });
+    } catch { return ''; }
+  }
+
+  function extractThumb(item) {
+    // 1. rss2json's own thumbnail field
+    if (item.thumbnail && item.thumbnail.startsWith('http')) return item.thumbnail;
+    // 2. enclosure (podcast/media RSS)
+    if (item.enclosure?.link && /\.(jpe?g|png|webp|gif)/i.test(item.enclosure.link)) return item.enclosure.link;
+    // 3. first <img> inside content or description
+    const html = item.content || item.description || '';
+    const m = html.match(/<img[^>]+src=["']([^"']+)["']/i);
+    if (m && m[1].startsWith('http')) return m[1];
+    return null;
+  }
+
+  const PLACEHOLDER_SVG = `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>`;
+
+  function newsCardHTML(item) {
+    const title = item.title.replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    const thumb = extractThumb(item);
+    const imgBlock = thumb
+      ? `<div class="news-img-wrap"><img src="${thumb}" alt="" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\\"news-img-placeholder\\">${PLACEHOLDER_SVG.replace(/"/g,"'")}</div>'"></div>`
+      : `<div class="news-img-wrap"><div class="news-img-placeholder">${PLACEHOLDER_SVG}</div></div>`;
+    return `<a class="news-card" href="${item.link}" target="_blank" rel="noopener noreferrer">
+      ${imgBlock}
+      <div class="news-body">
+        <span class="news-source">${item.source}</span>
+        <div class="news-title">${title}</div>
+        <div class="news-meta">
+          <span class="news-date">${fmtDate(item.pubDate)}</span>
+          <span class="news-arrow">→</span>
+        </div>
+      </div>
+    </a>`;
+  }
+
+  function skelHTML() {
+    return `<div class="news-card" style="pointer-events:none">
+      <div class="news-img-wrap"><div class="skel" style="width:100%;height:100%"></div></div>
+      <div class="news-body">
+        <div class="skel" style="height:18px;width:80px;border-radius:100px"></div>
+        <div style="display:flex;flex-direction:column;gap:6px;flex:1">
+          <div class="skel" style="height:14px;width:100%;border-radius:4px"></div>
+          <div class="skel" style="height:14px;width:75%;border-radius:4px"></div>
+        </div>
+        <div class="skel" style="height:11px;width:65px;border-radius:4px"></div>
+      </div>
+    </div>`;
+  }
+
+  function renderNewsSlice() {
+    const grid = document.getElementById('news-grid');
+    const start = newsPage * NEWS_PER_PAGE;
+    const slice = allNewsItems.slice(start, start + NEWS_PER_PAGE);
+    if (newsPage === 0) grid.innerHTML = slice.map(newsCardHTML).join('');
+    else grid.innerHTML += slice.map(newsCardHTML).join('');
+    newsPage++;
+    const wrap = document.getElementById('load-more-wrap');
+    if (wrap) wrap.style.display = newsPage * NEWS_PER_PAGE < allNewsItems.length ? 'block' : 'none';
+  }
+
+  function loadMoreNews() { renderNewsSlice(); }
+
+  async function initNews() {
+    const grid = document.getElementById('news-grid');
+    // Show 9 skeleton cards
+    grid.innerHTML = Array(9).fill(skelHTML()).join('');
+
+    const results = [];
+    await Promise.allSettled(NEWS_FEEDS.map(async feed => {
+      try {
+        const res = await fetch(RSS_API + encodeURIComponent(feed.url));
+        const data = await res.json();
+        if (data.status === 'ok' && data.items?.length) {
+          data.items.forEach(item => results.push({ ...item, source: feed.name }));
+        }
+      } catch {}
+    }));
+
+    allNewsItems = results.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+
+    if (!allNewsItems.length) {
+      grid.innerHTML = `<p style="grid-column:1/-1;text-align:center;padding:48px 0;color:var(--muted);font-size:14px">
+        Could not load news at this time. Please try again later.
+      </p>`;
+      return;
+    }
+
+    newsPage = 0;
+    renderNewsSlice();
+  }
+
+  initNews();
+
+  // ── CHANNEL POSTS ─────────────────────────────────────────────────────────
+  // ⚙️  PASTE YOUR JSONBIN URL HERE after setup (see README or guide)
+  // Example: 'https://api.jsonbin.io/v3/b/YOUR_BIN_ID/latest'
+  const CHANNEL_POSTS_URL = 'https://raw.githubusercontent.com/nightwalkerr86-star/otc-web/master/channel-posts.json';
+  const CH_PER_PAGE = 6;
+  let allChannelPosts = [];
+  let chPage = 0;
+
+  const TG_SVG = `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>`;
+
+  function chCardHTML(post) {
+    // Accept Unix timestamp (number), ISO string, or any date string
+    const d = typeof post.date === 'number' ? new Date(post.date * 1000) : new Date(post.date);
+    const dateStr = isNaN(d) ? '' : d.toLocaleDateString('en-HK', { day:'numeric', month:'short', year:'numeric' });
+    // Split text into body + hashtags
+    const lines = (post.text || '').split('\n');
+    const hashIdx = lines.findIndex(l => /^#\S/.test(l.trim()));
+    const bodyLines = hashIdx > -1 ? lines.slice(0, hashIdx) : lines;
+    const hashLines = hashIdx > -1 ? lines.slice(hashIdx) : [];
+    const bodyText = bodyLines.join('\n').trim();
+    const hashText = hashLines.join(' ').trim();
+
+    // Media
+    let mediaHTML = '';
+    if (post.photo) {
+      mediaHTML = `<div class="ch-media"><img src="${post.photo}" alt="" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\\"ch-media-placeholder\\"><svg width=40 height=40 viewBox=\\"0 0 24 24\\" fill=\\"none\\" stroke=\\"currentColor\\" stroke-width=\\"1\\"><rect x=\\"3\\" y=\\"3\\" width=\\"18\\" height=\\"18\\" rx=\\"2\\"/><circle cx=\\"8.5\\" cy=\\"8.5\\" r=\\"1.5\\"/><polyline points=\\"21 15 16 10 5 21\\"/></svg></div>'"></div>`;
+    } else if (post.video_thumb) {
+      mediaHTML = `<div class="ch-media" style="position:relative"><img src="${post.video_thumb}" alt="" loading="lazy"><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center"><div style="width:44px;height:44px;background:rgba(0,0,0,0.6);border-radius:50%;display:flex;align-items:center;justify-content:center"><svg width=18 height=18 viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div></div>`;
+    }
+
+    const tgLink = post.message_link || `https://t.me/${post.channel || 'hkotcdesk'}`;
+
+    return `<div class="ch-card">
+      ${mediaHTML}
+      <div class="ch-body">
+        <div class="ch-channel">
+          <span class="ch-channel-dot"></span>
+          港汇加密交易台 | HK OTC Desk
+        </div>
+        ${bodyText ? `<div class="ch-text">${bodyText.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</div>` : ''}
+        ${hashText ? `<div class="ch-hashtags">${hashText.replace(/</g,'&lt;')}</div>` : ''}
+        <div class="ch-footer">
+          <span class="ch-date">${dateStr}</span>
+          <a class="ch-tg-btn" href="${tgLink}" target="_blank" rel="noopener noreferrer">
+            ${TG_SVG} View on Telegram
+          </a>
+        </div>
+      </div>
+    </div>`;
+  }
+
+  function chSkelHTML() {
+    return `<div class="ch-card" style="pointer-events:none">
+      <div class="ch-media"><div class="skel" style="width:100%;height:100%"></div></div>
+      <div class="ch-body">
+        <div class="skel" style="height:12px;width:160px;border-radius:4px"></div>
+        <div style="display:flex;flex-direction:column;gap:6px;flex:1">
+          <div class="skel" style="height:13px;width:100%;border-radius:4px"></div>
+          <div class="skel" style="height:13px;width:90%;border-radius:4px"></div>
+          <div class="skel" style="height:13px;width:80%;border-radius:4px"></div>
+          <div class="skel" style="height:13px;width:70%;border-radius:4px"></div>
+        </div>
+        <div class="skel" style="height:11px;width:80px;border-radius:4px"></div>
+      </div>
+    </div>`;
+  }
+
+  function renderChannelSlice() {
+    const grid = document.getElementById('ch-grid');
+    const start = chPage * CH_PER_PAGE;
+    const slice = allChannelPosts.slice(start, start + CH_PER_PAGE);
+    if (chPage === 0) grid.innerHTML = slice.map(chCardHTML).join('');
+    else grid.innerHTML += slice.map(chCardHTML).join('');
+    chPage++;
+    const wrap = document.getElementById('ch-load-more-wrap');
+    if (wrap) wrap.style.display = chPage * CH_PER_PAGE < allChannelPosts.length ? 'block' : 'none';
+  }
+
+  function loadMoreChannel() { renderChannelSlice(); }
+
+  async function initChannelPosts() {
+    const grid = document.getElementById('ch-grid');
+    grid.innerHTML = Array(3).fill(chSkelHTML()).join('');
+    try {
+      const res = await fetch(CHANNEL_POSTS_URL + (CHANNEL_POSTS_URL.includes('?') ? '&' : '?') + 't=' + Date.now());
+      const data = await res.json();
+      // Handle JSONBin format { "record": [...] } or plain array
+      allChannelPosts = Array.isArray(data) ? data : (data.record || data.posts || []);
+      if (!allChannelPosts.length) throw new Error('empty');
+      chPage = 0;
+      renderChannelSlice();
+    } catch {
+      grid.innerHTML = `<p style="grid-column:1/-1;text-align:center;padding:36px 0;color:var(--muted);font-size:14px">
+        No channel posts yet. Posts will appear here once the bot is running.
+      </p>`;
+    }
+  }
+
+  initChannelPosts();
+</script>
+</body>
+</html>
